@@ -1,0 +1,39 @@
+Thành cập nhật: (*: đã thực hiện)
+Admin:
+-* Thêm bảng tài liệu: tb_resource
+-* Dùng model, module, controller cũ đã có sẵn trước đó
+-* Thêm các cột dữ liệu vào bảng admins(chức vụ, phòng ban, học vị)
+-* Thêm bảng: phòng ban (tb_department), chức vụ (tb_function), học hàm học vi (tb_degree)
+=> chạy lệnh : php artisan migrate
+-* Tạo model, controller, module mới
+
+Giang: 
+    - Thêm mới, sửa, xóa các danh mục: phòng ban, chức vụ, học hàm - học vị
+    - Cập nhật thêm thông tin admin
+    - Chỉnh sửa lại module tài liệu: cms_resources: status có 3 trạng thái (active, deactive, delete)
+   *** Giang bổ sung DB : 
+   -thêm trường url_part,file vào bảng tb_resource  
+   *** Đã làm : done
+   *** done: 
+           Tạo thêm bảng tb_duty có các trường dữ liệu như bảng department 
+           Tạo thêm trường ip_user cho bảng tb_cms_document
+
+Lâm: 
+    - Ghép lại giao diện trang chủ
+    - tb_cms_posts:
+        -- Xóa trường: url_coppy // author // cms_tag // list_relative // nhuanbut
+        -- Thêm trường: file_document varchar
+    - tb_post_history:
+        -- Thêm trường: file_document varchar
+    - tb_cms_taxonomys:
+        -- Thêm trường: vitri varchar
+        -- Thêm trường: news_position varchar, click varchar 
+    - tb_resource:
+        -- Thêm trường: phanloai int //dùng để phân loại tài liệu công khai (1) và không công khai (2)    
+
+    - Các vấn đề tồn đọng:
+    + Lỗi thống kê số lượt truy cập trang chủ
+    + Đếm số tin nhắn gửi đến chưa đọc, hiển thị tin nhắn từ dưới lên
+    
+
+    
